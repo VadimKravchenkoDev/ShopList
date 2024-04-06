@@ -58,8 +58,8 @@ dependencies {
     //    implementation("androidx.room:room-ktx:$room_version")
     //    kapt("androidx.room:room-compiler:$room_version")
     implementation(libs.androidx.room)
-    //ksp
-
+    //add ksp
+    ksp(libs.androidx.room.ksp)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)

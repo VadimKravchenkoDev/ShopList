@@ -1,6 +1,6 @@
 [versions]
 agp = "8.3.1"
-kotlin = "1.9.0"
+kotlin = "1.8.10"
 coreKtx = "1.10.1"
 junit = "4.13.2"
 junitVersion = "1.1.5"
@@ -12,7 +12,9 @@ roomVersion = "2.6.1"
 copmpilerKspVersion = "1.8.10-1.0.9"
 
 [libraries]
+
 androidx-room = { group = "androidx.room", name = "room-ktx", version.ref = "roomVersion" }
+androidx-room-ksp = { group = "androidx.room", name = "room-compiler", version.ref = "roomVersion" }
 
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
