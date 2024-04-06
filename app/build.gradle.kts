@@ -60,6 +60,8 @@ dependencies {
     implementation(libs.androidx.room)
     //add ksp
     ksp(libs.androidx.room.ksp)
+    //Hilt
+    implementation(libs.androidx.hilt)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
