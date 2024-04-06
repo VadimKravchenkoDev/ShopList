@@ -1,8 +1,11 @@
+import org.jetbrains.kotlin.kapt3.base.Kapt.kapt
+
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
     alias(libs.plugins.compilerKsp)
-    //id("kotlin-kapt")
+    alias(libs.plugins.hilt)
+
 }
 
 android {
@@ -53,15 +56,19 @@ android {
 
 dependencies {
 
-    //add room dependencies
-    //    val room_version = "2.6.1"
-    //    implementation("androidx.room:room-ktx:$room_version")
-    //    kapt("androidx.room:room-compiler:$room_version")
+    //Room
     implementation(libs.androidx.room)
-    //add ksp
     ksp(libs.androidx.room.ksp)
-    //Hilt
+    //Dagger hilt
     implementation(libs.androidx.hilt)
+    ksp(libs.androidx.hilt.ksp)
+    implementation(libs.androidx.dagger)
+    ksp(libs.androidx.dagger.ksp)
+    //Data store
+    implementation(libs.androidx.datastore)
+    //Compose dependencies
+    implementation(libs.androidx.viewmodel)
+    implementation(libs.androidx.navigation)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
