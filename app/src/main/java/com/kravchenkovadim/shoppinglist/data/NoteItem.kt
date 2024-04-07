@@ -1,6 +1,5 @@
 package com.kravchenkovadim.shoppinglist.data
 
-import android.hardware.camera2.CameraExtensionSession.StillCaptureLatency
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
