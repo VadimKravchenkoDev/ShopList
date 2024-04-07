@@ -2,7 +2,7 @@ package com.kravchenkovadim.shoppinglist.data
 
 import kotlinx.coroutines.flow.Flow
 
-class NoreRepoImpl(
+class NoteRepoImpl(
     private val dao: NoteDao
 ) :NoteRepository{
     override suspend fun insertItem(item: NoteItem) {
