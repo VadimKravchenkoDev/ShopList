@@ -4,6 +4,7 @@ import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
+import androidx.room.Update
 import kotlinx.coroutines.flow.Flow
 
 interface AddItemDao {
@@ -15,7 +16,7 @@ interface AddItemDao {
     fun getAllItemsById(listId: Int): Flow<List<AddItem>>
     @Query("SELECT * FROM shop_list_item WHERE id = :listId")
     suspend fun getListItemById(listId: Int): ShoppingListItem
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    @Update
     suspend fun insertItem(item: ShoppingListItem)
 
 }
