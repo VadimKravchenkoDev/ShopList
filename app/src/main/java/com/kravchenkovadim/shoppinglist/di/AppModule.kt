@@ -4,7 +4,7 @@ import android.app.Application
 import androidx.room.Room
 import com.kravchenkovadim.shoppinglist.data.AddItemRepoImpl
 import com.kravchenkovadim.shoppinglist.data.AddItemRepository
-import com.kravchenkovadim.shoppinglist.data.MaidDb
+import com.kravchenkovadim.shoppinglist.data.MainDb
 import com.kravchenkovadim.shoppinglist.data.NoteRepoImpl
 import com.kravchenkovadim.shoppinglist.data.NoteRepository
 import com.kravchenkovadim.shoppinglist.data.ShoppingListRepoImp
@@ -20,29 +20,29 @@ import javax.inject.Singleton
 object AppModule {
         @Provides
         @Singleton
-        fun provideMainDb(app: Application): MaidDb{
+        fun provideMainDb(app: Application): MainDb{
             return Room.databaseBuilder(
                 app,
-                MaidDb::class.java,
+                MainDb::class.java,
                 "shop_list_db"
             ).build()
         }
 
     @Provides
     @Singleton
-    fun provideShopRepo(db : MaidDb) : ShoppingListRepository{
+    fun provideShopRepo(db : MainDb) : ShoppingListRepository{
         return ShoppingListRepoImp(db.shoppingListDao)
     }
 
     @Provides
     @Singleton
-    fun provideAddItemRepo(db : MaidDb) : AddItemRepository{
+    fun provideAddItemRepo(db : MainDb) : AddItemRepository{
         return AddItemRepoImpl(db.addItemDao)
     }
 
     @Provides
     @Singleton
-    fun provideNoteRepo(db : MaidDb) : NoteRepository {
+    fun provideNoteRepo(db : MainDb) : NoteRepository {
         return NoteRepoImpl(db.noteDao)
     }
 }
