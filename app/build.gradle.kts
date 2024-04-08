@@ -1,20 +1,17 @@
-import org.jetbrains.kotlin.kapt3.base.Kapt.kapt
-
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
     alias(libs.plugins.compilerKsp)
     alias(libs.plugins.hilt)
-
 }
 
 android {
-    namespace = "com.kravchenkovadim.shoppinglist"
+    namespace = "com.kravchenkovadim.experiment"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.kravchenkovadim.shoppinglist"
-        minSdk = 24
+        applicationId = "com.kravchenkovadim.experiment"
+        minSdk = 23
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -59,16 +56,17 @@ dependencies {
     //Room
     implementation(libs.androidx.room)
     ksp(libs.androidx.room.ksp)
-    //Dagger hilt
-    implementation(libs.androidx.hilt)
-    ksp(libs.androidx.hilt.ksp)
-    implementation(libs.androidx.dagger)
-    ksp(libs.androidx.dagger.ksp)
     //Data store
     implementation(libs.androidx.datastore)
     //Compose dependencies
     implementation(libs.androidx.viewmodel)
     implementation(libs.androidx.navigation)
+    //Dagger hilt
+    implementation(libs.androidx.hilt.android)
+    ksp(libs.androidx.hilt.compiler)
+    implementation(libs.androidx.hilt.navigation.compose)
+    ksp(libs.androidx.hilt.navigation.compiler)
+
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
