@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace = "com.kravchenkovadim.experiment"
+    namespace = "com.kravchenkovadim.shoppinglist"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.kravchenkovadim.experiment"
+        applicationId = "com.kravchenkovadim.shoppinglist"
         minSdk = 23
         targetSdk = 34
         versionCode = 1
