@@ -1,19 +1,16 @@
 package com.kravchenkovadim.shoppinglist.main_screen
 
-
 import android.annotation.SuppressLint
-import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.material.FloatingActionButtonDocked
-import androidx.compose.material3.FabPosition
-import androidx.compose.material3.FloatingActionButton
-import androidx.compose.material3.Icon
-import androidx.compose.material3.Scaffold
+import androidx.compose.material.FabPosition
+import androidx.compose.material.FloatingActionButton
+import androidx.compose.material.Icon
+import androidx.compose.material.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import com.kravchenkovadim.shoppinglist.R
 
-@SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
+@SuppressLint("UnusedMaterial3ScaffoldPaddingParameter", "UnusedMaterialScaffoldPaddingParameter")
 @Composable
 fun MainScreen() {
     Scaffold(
@@ -21,11 +18,7 @@ fun MainScreen() {
             BottomNav()
         },
         floatingActionButton = {
-            FloatingActionButton(
-                onClick = { },
-                shape = CircleShape,
-                containerColor = Color(0xFF05BEFA),
-            ) {
+            FloatingActionButton(onClick = { }) {
                 Icon(
                     painter = painterResource(
                         id = R.drawable.add_icon
@@ -36,10 +29,8 @@ fun MainScreen() {
             }
         },
         floatingActionButtonPosition = FabPosition.Center,
-    ) {  // This block defines the content within the Scaffold
-        FloatingActionButtonDocked(
-            docked = true
-        )
+        isFloatingActionButtonDocked = true
+    ){
+
     }
 }
-

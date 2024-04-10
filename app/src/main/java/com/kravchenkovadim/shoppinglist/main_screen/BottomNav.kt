@@ -13,5 +13,8 @@ fun BottomNav (){
         BottomNavItem.SettingsItem
     )
     BottomNavigation(backgroundColor = Color.White) {
+        listItems.forEach { bottomNavItem ->  
+            
+        }
     }
 }
