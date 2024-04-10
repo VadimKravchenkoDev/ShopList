@@ -13,6 +13,5 @@ fun BottomNav (){
         BottomNavItem.SettingsItem
     )
     BottomNavigation(backgroundColor = Color.White) {
-
     }
 }

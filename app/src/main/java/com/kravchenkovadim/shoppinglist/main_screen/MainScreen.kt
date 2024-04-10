@@ -3,6 +3,7 @@ package com.kravchenkovadim.shoppinglist.main_screen
 
 import android.annotation.SuppressLint
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.material.FloatingActionButtonDocked
 import androidx.compose.material3.FabPosition
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
@@ -24,24 +25,21 @@ fun MainScreen() {
                 onClick = { },
                 shape = CircleShape,
                 containerColor = Color(0xFF05BEFA),
-
-
-
-
-                ) {
+            ) {
                 Icon(
                     painter = painterResource(
                         id = R.drawable.add_icon
                     ),
                     contentDescription = "Add",
                     tint = Color.White,
-
-                    )
+                )
             }
         },
-        floatingActionButtonPosition = FabPosition.Center
-
-    ) {
-
+        floatingActionButtonPosition = FabPosition.Center,
+    ) {  // This block defines the content within the Scaffold
+        FloatingActionButtonDocked(
+            docked = true
+        )
     }
 }
+

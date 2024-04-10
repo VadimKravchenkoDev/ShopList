@@ -68,6 +68,11 @@ dependencies {
     ksp(libs.androidx.hilt.navigation.compiler)
     //Material
     implementation(libs.androidx.material)
+    //coordinatorlayout
+    implementation(libs.androidx.coordinatorlayout)
+
+    //appcompat
+    implementation(libs.androidx.appcompat)
 
 
     implementation(libs.androidx.core.ktx)
