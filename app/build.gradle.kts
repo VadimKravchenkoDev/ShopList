@@ -66,6 +66,8 @@ dependencies {
     ksp(libs.androidx.hilt.compiler)
     implementation(libs.androidx.hilt.navigation.compose)
     ksp(libs.androidx.hilt.navigation.compiler)
+    //Material
+    implementation(libs.androidx.material)
 
 
     implementation(libs.androidx.core.ktx)

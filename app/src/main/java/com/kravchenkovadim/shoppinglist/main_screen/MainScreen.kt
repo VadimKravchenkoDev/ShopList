@@ -17,7 +17,7 @@ import com.kravchenkovadim.shoppinglist.R
 fun MainScreen() {
     Scaffold(
         bottomBar = {
-
+            BottomNav()
         },
         floatingActionButton = {
             FloatingActionButton(
