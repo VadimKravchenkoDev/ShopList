@@ -9,6 +9,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import com.kravchenkovadim.shoppinglist.R
+import com.kravchenkovadim.shoppinglist.ui.theme.BlueLight
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter", "UnusedMaterialScaffoldPaddingParameter")
 @Composable
@@ -18,7 +19,8 @@ fun MainScreen() {
             BottomNav()
         },
         floatingActionButton = {
-            FloatingActionButton(onClick = { }) {
+            FloatingActionButton(onClick = { },
+                backgroundColor = BlueLight) {
                 Icon(
                     painter = painterResource(
                         id = R.drawable.add_icon
