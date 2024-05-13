@@ -4,6 +4,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Card
+import androidx.compose.material.LinearProgressIndicator
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -15,6 +16,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
 import com.kravchenkovadim.shoppinglist.ui.theme.DarkText
+import com.kravchenkovadim.shoppinglist.ui.theme.LightText
 
 
 @Preview(showBackground = true)
@@ -36,7 +38,9 @@ fun UiShoppingListItem() {
                 }
         ) {
             Column(
-                modifier = Modifier.fillMaxWidth().padding(8.dp)
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(8.dp)
             ) {
                 Text(
                     text = "List 1",
@@ -45,6 +49,19 @@ fun UiShoppingListItem() {
                         fontWeight = FontWeight.Bold,
                         fontSize = 16.sp
                     )
+                )
+                Text(
+                    text = "12/12/24 13:00",
+                    style = TextStyle(
+                        color = LightText,
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 12.sp
+                    )
+                )
+                LinearProgressIndicator(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(top = 5.dp)
                 )
             }
         }
