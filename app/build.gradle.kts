@@ -55,12 +55,14 @@ dependencies {
 
     //Room
     implementation(libs.androidx.room)
+
     ksp(libs.androidx.room.ksp)
     //Data store
     implementation(libs.androidx.datastore)
     //Compose dependencies
     implementation(libs.androidx.viewmodel)
     implementation(libs.androidx.navigation)
+    implementation(libs.androidx.constraintlayout)
     //Dagger hilt
     implementation(libs.androidx.hilt.android)
     ksp(libs.androidx.hilt.compiler)
