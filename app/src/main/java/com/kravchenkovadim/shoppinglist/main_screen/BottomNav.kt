@@ -21,7 +21,9 @@ fun BottomNav() {
         listItems.forEach { bottomNavItem ->
             BottomNavigationItem(
                 selected = false,
-                onClick = { },
+                onClick = {
+
+                },
                 icon = {
                     Icon(
                         painter = painterResource(
