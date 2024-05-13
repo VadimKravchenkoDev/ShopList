@@ -7,10 +7,14 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.navigation.NavHostController
 import com.kravchenkovadim.shoppinglist.ui.theme.BlueLight
 
 @Composable
-fun BottomNav() {
+
+fun BottomNav(
+    navController: NavHostController
+) {
     val listItems = listOf(
         BottomNavItem.ListItem,
         BottomNavItem.NoteItem,
@@ -22,7 +26,7 @@ fun BottomNav() {
             BottomNavigationItem(
                 selected = false,
                 onClick = {
-
+                    navController.navigate(bottomNavItem.route)
                 },
                 icon = {
                     Icon(
