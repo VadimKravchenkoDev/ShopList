@@ -15,6 +15,7 @@ import com.kravchenkovadim.shoppinglist.navigation.NavigationGraph
 import com.kravchenkovadim.shoppinglist.ui.theme.BlueLight
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter", "UnusedMaterialScaffoldPaddingParameter")
+
 @Composable
 fun MainScreen() {
     val navController = rememberNavController()
