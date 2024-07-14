@@ -11,6 +11,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import com.kravchenkovadim.shoppinglist.ui.theme.BlueLight
+import com.kravchenkovadim.shoppinglist.ui.theme.Purple80
 
 @Composable
 
@@ -43,7 +44,7 @@ fun BottomNav(
                 label = {
                     Text(text = bottomNavItem.title)
                 },
-                selectedContentColor = BlueLight,
+                selectedContentColor = Purple80,
                 unselectedContentColor = Color.Gray,
                 alwaysShowLabel = false
             )

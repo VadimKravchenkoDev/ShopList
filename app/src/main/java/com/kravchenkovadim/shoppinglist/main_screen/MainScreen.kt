@@ -13,6 +13,7 @@ import com.kravchenkovadim.shoppinglist.R
 import com.kravchenkovadim.shoppinglist.ShoppingListScreen.ShoppingListScreen
 import com.kravchenkovadim.shoppinglist.navigation.NavigationGraph
 import com.kravchenkovadim.shoppinglist.ui.theme.BlueLight
+import com.kravchenkovadim.shoppinglist.ui.theme.Purple80
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter", "UnusedMaterialScaffoldPaddingParameter")
 
@@ -26,7 +27,7 @@ fun MainScreen() {
         },
         floatingActionButton = {
             FloatingActionButton(onClick = { },
-                backgroundColor = BlueLight) {
+                backgroundColor = Purple80) {
                 Icon(
                     painter = painterResource(
                         id = R.drawable.add_icon
